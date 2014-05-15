@@ -5,13 +5,12 @@ capacity=5
 # dynamic programming
 num=len(weight)
 opt=[0]*(capacity+1)
+optori=[0]*(capacity+1)
 for i in range(0,num):
-	optori=opt
 	for j in range(0,capacity+1):
-		if j+weight[i]>capacity:
-			break
-		else:
-			if optori[j+weight[i]]<optori[j]+value[i]:
-				opt[j+weight[i]]=optori[j]+value[i]
-				print opt
+		optori[j]=opt[j]
+	for j in range(0,capacity+1-weight[i]):
+		if optori[j+weight[i]]<optori[j]+value[i]:
+			opt[j+weight[i]]=optori[j]+value[i]
+		print opt
 print opt[capacity]
