@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+*.log
+*.swp
+*.tmp
 
 # Python:
 *.py[cod]
@@ -10,3 +13,4 @@ Desktop.ini
 *.egg-info
 dist
 build
+
